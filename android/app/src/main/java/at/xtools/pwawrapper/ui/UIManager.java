@@ -80,14 +80,8 @@ public class UIManager {
 
     // handle visibility of offline screen
     public void setOffline(boolean offline) {
-//        if (offline) {
-//            setLoadingProgress(100);
-//            webView.setVisibility(View.INVISIBLE);
-//            offlineContainer.setVisibility(View.VISIBLE);
-//        } else {
-            webView.setVisibility(View.VISIBLE);
-            offlineContainer.setVisibility(View.INVISIBLE);
-//        }
+        webView.setVisibility(View.VISIBLE);
+        offlineContainer.setVisibility(View.INVISIBLE);
     }
 
     // set icon in recent activity view to a white one to be visible in the app bar
