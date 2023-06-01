@@ -69,8 +69,8 @@ function displaySideEffects(eCodes_data) {
         $("#mainSideEffectsList").append("<li class='list-item'>Please search to display results</li>");
     } else {
         for (var i = 0; i < eCodes_data.length; i++) {
-            tmp = eCodes_data[i].name
-            var listItem = $("<li class='list-item'></li>").text(tmp);
+            var tmp = "<strong>" + eCodes_data[i].code + " (" + eCodes_data[i].name + ")</strong>: " + eCodes_data[i].more_info.side_effects;
+            var listItem = $("<li class='list-item'></li>").html(tmp);
             $("#mainSideEffectsList").append(listItem);
         }
     }
