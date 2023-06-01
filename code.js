@@ -52,12 +52,27 @@ function splitToList(txt) {
     return items;
 }
 
+function getECodeData(eCodes_list) {
+    var eCodes_data = [];
+    for (var key in data) {
+        if (eCodes_list.includes(key)) {
+            eCodes_data.push(data[key]);
+        }
+    }
+    return eCodes_data
+}
+
+
 $(document).ready(function () {
 
     $('#searchButton').click(function () {
 
-        var contents = $("#searchInput").val();
-        console.log(contents);
+        var inputText = $("#searchInput").val();
+        var eCodes_list = splitToList(inputText);
+        var eCodes_data = getECodeData(eCodes_list);
+
+
+        console.log(eCodes_data);
 
     });
 
