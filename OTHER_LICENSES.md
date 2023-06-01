@@ -702,14 +702,11 @@ OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 ```
 
-- IconKitchen
+- IconKitchen by Roman Nurik
 
 ```
-Unable to find the LICENSE
-```
+Successor of AndroidAssetStudio: https://github.com/romannurik/AndroidAssetStudio
 
-- `artwork/github/Android_logo_2019_(stacked).svg.png`
+Unable to find any LICENSE Information
 
-```
-https://commons.wikimedia.org/wiki/File:Android_logo_2019_%28stacked%29.svg
 ```
