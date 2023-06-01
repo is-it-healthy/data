@@ -3,7 +3,7 @@ data = {
         "code": "E100(ii)",
         "name": "Turmeric",
         "href": "e100.htm",
-        "fucntion": "Orange-yellow colour",
+        "function": "Orange-yellow colour",
         "more_info": {
             "origin": "Natural colour isolated from the roots and stem of Yellowroot (Curcuma longa  and Curcuma domestica). Turmeric is the crude extract, whereas curcumin is the purified compound. It imparts the yellow colour to curry powder. More on curcumin, click .",
             "characteristics": "Food colour, whose colour ranges from yellow to red, depending on pH (acidity). It is not very soluble in water.",
@@ -17,7 +17,7 @@ data = {
         "code": "E101(ii)",
         "name": "Riboflavin- 5'- Phosphate",
         "href": "e101.htm",
-        "fucntion": "Yellow colour, vitamin B2",
+        "function": "Yellow colour, vitamin B2",
         "more_info": {
             "origin": "Natural colour present in many foods such as milk, eggs, liver and vegetables. Commercially prepared from yeasts. It is also manufactured synthetically.",
             "characteristics": "Yellow food colour. Not very soluble in water.",
@@ -31,7 +31,7 @@ data = {
         "code": "E102",
         "name": "Tartrazine",
         "href": "e102.htm",
-        "fucntion": "Yellow colour, azo dye",
+        "function": "Yellow colour, azo dye",
         "more_info": {
             "origin": "Synthetic azo dye. See  for a background on azo dyes.",
             "characteristics": "Yellow food colour. Very soluble in water.",
@@ -62,6 +62,35 @@ function getECodeData(eCodes_list) {
     return eCodes_data
 }
 
+function displaySideEffects(eCodes_data) {
+    $("#mainSideEffectsList").empty();
+
+    if (eCodes_data.length === 0) {
+        // if eCodes_data is empty
+        $("#mainSideEffectsList").append("<li class='list-item'>Please search to display results</li>");
+    } else {
+        // iterate through each item in eCodes_data and add it as a li
+        for (var i = 0; i < eCodes_data.length; i++) {
+            var listItem = $("<li class='list-item'></li>").text(eCodes_data[i].name);
+            $("#mainSideEffectsList").append(listItem);
+        }
+    }
+}
+
+function displayAdditionalInformation(eCodes_data) {
+    $('#additionalEffectsList').empty();
+
+    for (var i = 0; i < eCodes_data.length; i++) {
+        var li = $('<li>');
+        var h3 = $('<h3>').text(eCodes_data[i].name);
+        var p = $('<p>').text(eCodes_data[i].function);
+
+        li.append(h3);
+        li.append(p);
+
+        $('#additionalEffectsList').append(li);
+    }
+}
 
 $(document).ready(function () {
 
@@ -70,7 +99,8 @@ $(document).ready(function () {
         var inputText = $("#searchInput").val();
         var eCodes_list = splitToList(inputText);
         var eCodes_data = getECodeData(eCodes_list);
-
+        displaySideEffects(eCodes_data);
+        displayAdditionalInformation(eCodes_data);
 
         console.log(eCodes_data);
 

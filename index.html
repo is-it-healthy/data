@@ -22,7 +22,7 @@
         .navbar h1 {
             margin: 0;
             text-align: center;
-            font-size: 24px;
+            font-size: 30px;
         }
 
         .search-container {
@@ -62,9 +62,12 @@
         }
 
         .text-display {
-            padding: 40px;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-bottom: 20px;
+            padding-top: 10px;
             background-color: #f2f2f2;
-            text-align: center;
+            text-align: left;
         }
 
         .text-display h2 {
@@ -81,6 +84,10 @@
             text-align: center;
             font-size: 16px;
         }
+
+        .title {
+            padding-left: 20px;
+        }
     </style>
 
 </head>
@@ -95,17 +102,21 @@
         <button id="searchButton" class="search-button">Search</button>
     </div>
 
-    <ul class="list">
-        <li class="list-item">Item 1</li>
-        <li class="list-item">Item 2</li>
-        <li class="list-item">Item 3</li>
-        <li class="list-item">Item 4</li>
-        <li class="list-item">Item 5</li>
+    <h2 class="title">Side Effects:</h2>
+    <ul id="mainSideEffectsList" class="list">
+        <li class='list-item'>Please search to display results</li>
     </ul>
 
+    <h2 class="title">Additional Information</h2>
     <div class="text-display">
-        <h2>Text Display Area</h2>
-        <p>This is where the text will be displayed.</p>
+
+        <ul id="additionalEffectsList">
+            <li>
+                <h3>Title</h3>
+                <p></p>
+            </li>
+        </ul>
+
     </div>
 
     <div class="footer">
