@@ -1,5 +1,9 @@
 # Android App
 
+<div align="center">
+  <img src="https://raw.githubusercontent.com/hirusha-adi/is-it-healthy/main/artwork/github/Android_logo_2019_(stacked).svg.png" width="250">
+</div>
+
 This is an Android Wrapper application to create native Android Apps from an offline-capable Progressive Web App, cloned from [xtools-at/Android-PWA-Wrapper](https://github.com/xtools-at/Android-PWA-Wrapper) and changed to match this applications need accordingly
 
 ## Capabilities
