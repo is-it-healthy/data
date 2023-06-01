@@ -28,4 +28,34 @@ Discover the hidden truths behind the food you eat and embark on a journey of in
 
 ## Android Installation Guide
 
-To be added do the release documenation from the next release onwards.
+1. Download the .apk (Select from either the Dark Mode or the Light Mode)
+
+<img src="https://github.com/hirusha-adi/is-it-healthy/assets/36286877/19280121-105b-4266-96e1-dd8b09906499" width="300">
+
+2. Click "Download Anyway"
+
+<img src="https://github.com/hirusha-adi/is-it-healthy/assets/36286877/a0e33d33-3590-4b7f-b9bc-d9004ad3c025" width="300">
+
+3. Open the Downloaded File
+
+<img src="https://github.com/hirusha-adi/is-it-healthy/assets/36286877/4c397df0-f306-4efb-8a95-62b9b94541a7" width="300">
+
+4. Click "Install"
+
+<img src="https://github.com/hirusha-adi/is-it-healthy/assets/36286877/d4d9e087-d216-49bb-8440-b41241045d52" width="300">
+
+5. Click "More Details"
+
+<img src="https://github.com/hirusha-adi/is-it-healthy/assets/36286877/65581d3e-eaef-4bc1-a0a1-01f7173c11ac" width="300">
+
+6. Click "Install Anyway"
+
+<img src="https://github.com/hirusha-adi/is-it-healthy/assets/36286877/2dd6cecb-6c6b-4a28-b5b0-d95d37151300" width="300">
+
+7. App has been installed successfully!
+
+<img src="https://github.com/hirusha-adi/is-it-healthy/assets/36286877/8542b175-5ee6-47f9-9028-298d5b5251c6" width="300">
+
+8. Open the app from your launcher
+
+<img src="https://github.com/hirusha-adi/is-it-healthy/assets/36286877/0fb766f9-de43-4ebd-b9e6-42f24cd6b4a1" width="300">
