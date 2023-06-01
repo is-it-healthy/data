@@ -34,13 +34,22 @@ class Scrape:
 
         a = str(soup.find("td", bgcolor="white", valign="top", align="left", colspan="2")).strip()
         try:
-            origin = Scrape.sanitize(a.split('<p><strong>Origin: <')[1].split("</p>")[0])
+            origin = Scrape.sanitize(a.split('><strong>Origin: <')[1].split("</p>")[0])
         except:
             origin = ""
         try:
             characteristics = Scrape.sanitize(a.split('<p><strong>Function &amp; characteristics: <')[1].split("</p>")[0])
         except:
-            characteristics = ""
+            try:
+                characteristics = Scrape.sanitize(a.split('>\n    <p><strong>Function &amp; Characteristics: <')[1].split("</p>")[0])
+            except:
+                try:
+                    characteristics = Scrape.sanitize(a.split('>\n    <p><strong>Function &amp; Characteristics: <')[1].split("</p>")[0])
+                except:
+                    try:
+                        characteristics = Scrape.sanitize(a.split('<strong>Function &amp; Characteristics: <br>\n    </strong>')[1].split("</p>")[0])
+                    except:
+                        characteristics = ""
         try:
             products = Scrape.sanitize(a.split('<p><strong>Products: <')[1].split("</p>")[0])
         except:
@@ -54,7 +63,10 @@ class Scrape:
                 try:
                     daily_intake = Scrape.sanitize(a.split('<p><strong>Acceptable daily intake (ADI): <')[1].split("</p>")[0])
                 except:
-                    daily_intake = ""
+                    try:
+                        daily_intake = Scrape.sanitize(a.split('<p><strong>Acceptable daily intake (ADI) : <')[1].split("</p>")[0])
+                    except:
+                        daily_intake = ""
         try:
             side_effects = Scrape.sanitize(a.split('<p><strong>Side effects: <')[1].split("</p>")[0])
         except:
@@ -110,10 +122,10 @@ class Scrape:
     def saveData(self):
         if self.data is None:
             self.getMainPage()
-        with open(os.path.join(os.getcwd(), 'data6.json'), 'w', encoding='utf-8') as file:
+        with open(os.path.join(os.getcwd(), 'data9.json'), 'w', encoding='utf-8') as file:
             json.dump(self.data, file)
 
 
-x = Scrape('https://www.food-info.net/uk/e/e600-700.htm')
+x = Scrape('https://www.food-info.net/uk/e/e900-1000.htm')
 x.getMainPage()
 x.saveData()
