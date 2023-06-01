@@ -94,10 +94,12 @@ class Scrape:
             }
 
             count += 1
-            if count == 5:
-                break
+            # if count == 5:
+            #     break
+            print(self.data)
 
         print(self.data)
+        print("Added ", count)
 
     def saveData(self):
         if self.data is None:
