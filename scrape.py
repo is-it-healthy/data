@@ -34,27 +34,33 @@ class Scrape:
 
         a = str(soup.find("td", bgcolor="white", valign="top", align="left", colspan="2")).strip()
         try:
-            origin = Scrape.sanitize(a.split('<p><strong>Origin: <br/>')[1].split("</p>")[0])
+            origin = Scrape.sanitize(a.split('<p><strong>Origin: <')[1].split("</p>")[0])
         except:
             origin = ""
         try:
-            characteristics = Scrape.sanitize(a.split('<p><strong>Function &amp; characteristics: <br/>')[1].split("</p>")[0])
+            characteristics = Scrape.sanitize(a.split('<p><strong>Function &amp; characteristics: <')[1].split("</p>")[0])
         except:
             characteristics = ""
         try:
-            products = Scrape.sanitize(a.split('<p><strong>Products: <br/>')[1].split("</p>")[0])
+            products = Scrape.sanitize(a.split('<p><strong>Products: <')[1].split("</p>")[0])
         except:
             products = ""
         try:
-            daily_intake = Scrape.sanitize(a.split('<p><strong>Daily intake: <br/>')[1].split("</p>")[0])
+            daily_intake = Scrape.sanitize(a.split('<p><strong>Daily intake: <')[1].split("</p>")[0])
         except:
-            daily_intake = ""
+            try:
+                daily_intake = Scrape.sanitize(a.split('<p><strong>Acceptable Daily Intake: <')[1].split("</p>")[0])
+            except:
+                try:
+                    daily_intake = Scrape.sanitize(a.split('<p><strong>Acceptable daily intake (ADI): <')[1].split("</p>")[0])
+                except:
+                    daily_intake = ""
         try:
-            side_effects = Scrape.sanitize(a.split('<p><strong>Side effects: <br/>')[1].split("</p>")[0])
+            side_effects = Scrape.sanitize(a.split('<p><strong>Side effects: <')[1].split("</p>")[0])
         except:
             side_effects = ""
         try:
-            dietary_restrictions = Scrape.sanitize(a.split('<p><strong>Dietary restrictions: <br/>')[1].split("</p>")[0])
+            dietary_restrictions = Scrape.sanitize(a.split('<p><strong>Dietary restrictions: <')[1].split("</p>")[0])
         except:
             dietary_restrictions = ""
 
@@ -104,10 +110,10 @@ class Scrape:
     def saveData(self):
         if self.data is None:
             self.getMainPage()
-        with open(os.path.join(os.getcwd(), 'data.json'), 'w', encoding='utf-8') as file:
+        with open(os.path.join(os.getcwd(), 'data6.json'), 'w', encoding='utf-8') as file:
             json.dump(self.data, file)
 
 
-x = Scrape('https://www.food-info.net/uk/e/e100-200.htm')
+x = Scrape('https://www.food-info.net/uk/e/e600-700.htm')
 x.getMainPage()
 x.saveData()
