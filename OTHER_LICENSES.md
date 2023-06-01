@@ -707,3 +707,9 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 ```
 Unable to find the LICENSE
 ```
+
+- `artwork/github/Android_logo_2019_(stacked).svg.png`
+
+```
+https://commons.wikimedia.org/wiki/File:Android_logo_2019_%28stacked%29.svg
+```
