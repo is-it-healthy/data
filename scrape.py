@@ -21,6 +21,11 @@ class Scrape:
         return a
 
     @staticmethod
+    def keyName(a: str):
+        a = a.strip().replace("E", "")
+        return a
+
+    @staticmethod
     def getAdditionalInfo(href):
         url = "https://www.food-info.net/uk/e/" + href
         response = requests.get(url)
@@ -73,29 +78,31 @@ class Scrape:
 
             moreInfo = Scrape.getAdditionalInfo(href=href)
 
-            self.data[str(re.sub("[^0-9]", "", number))] = {
+            self.data[Scrape.keyName(a=number)] = {
                 "code": number,
                 "name": name,
                 "href": href,
-                "fucntion": function,
+                "function": function,
                 "more_info": {
                     "origin": moreInfo['origin'],
                     "characteristics": moreInfo['characteristics'],
                     "products": moreInfo['products'],
-                    "dailt_intake": moreInfo['daily_intake'],
+                    "daily_intake": moreInfo['daily_intake'],
                     "side_effects": moreInfo['side_effects'],
                     "dietary_restrictions": moreInfo['dietary_restrictions']
                 }
             }
+
             count += 1
             if count == 5:
                 break
+
         print(self.data)
 
     def saveData(self):
         if self.data is None:
             self.getMainPage()
-        with open(os.path.join(os.getcwd(), 'data', 'data.json'), 'w', encoding='utf-8') as file:
+        with open(os.path.join(os.getcwd(), 'data.json'), 'w', encoding='utf-8') as file:
             json.dump(self.data, file)
 
 
