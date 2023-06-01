@@ -66,12 +66,11 @@ function displaySideEffects(eCodes_data) {
     $("#mainSideEffectsList").empty();
 
     if (eCodes_data.length === 0) {
-        // if eCodes_data is empty
         $("#mainSideEffectsList").append("<li class='list-item'>Please search to display results</li>");
     } else {
-        // iterate through each item in eCodes_data and add it as a li
         for (var i = 0; i < eCodes_data.length; i++) {
-            var listItem = $("<li class='list-item'></li>").text(eCodes_data[i].name);
+            tmp = eCodes_data[i].name
+            var listItem = $("<li class='list-item'></li>").text(tmp);
             $("#mainSideEffectsList").append(listItem);
         }
     }
@@ -80,66 +79,70 @@ function displaySideEffects(eCodes_data) {
 function displayAdditionalInformation(eCodes_data) {
     $('#additionalEffectsList').empty();
 
-    for (var i = 0; i < eCodes_data.length; i++) {
+    if (eCodes_data.length === 0) {
+        $("#additionalEffectsList").append("<li><h3>Please search to display results</h3></li>");
+    } else {
+        for (var i = 0; i < eCodes_data.length; i++) {
 
-        // parent element
-        var li = $('<li>');
+            // parent element
+            var li = $('<li>');
 
-        // name / introduction
-        tmp = eCodes_data[i].name + " - " + eCodes_data[i].code
-        var h2_name = $('<h2>').addClass('sub-title').text(tmp);
-        li.append(h2_name);
+            // name / introduction
+            tmp = eCodes_data[i].name + " - " + eCodes_data[i].code
+            var h2_name = $('<h2>').addClass('sub-title').text(tmp);
+            li.append(h2_name);
 
-        // side effects
-        var h3_mi_5 = $('<h3>').addClass('sub-category').text("Side Effects");
-        li.append(h3_mi_5);
-        tmp = eCodes_data[i].more_info.side_effects
-        var p_mi_5 = $('<p>').addClass('description').text(tmp);
-        li.append(p_mi_5);
+            // side effects
+            var h3_mi_5 = $('<h3>').addClass('sub-category').text("Side Effects");
+            li.append(h3_mi_5);
+            tmp = eCodes_data[i].more_info.side_effects
+            var p_mi_5 = $('<p>').addClass('description').text(tmp);
+            li.append(p_mi_5);
 
-        // function
-        var h3_functions = $('<h3>').addClass('sub-category').text("Functions");
-        li.append(h3_functions);
-        tmp = eCodes_data[i].more_info.side_effects
-        var p_functions = $('<p>').addClass('description').text(tmp);
-        li.append(p_functions);
+            // function
+            var h3_functions = $('<h3>').addClass('sub-category').text("Functions");
+            li.append(h3_functions);
+            tmp = eCodes_data[i].more_info.side_effects
+            var p_functions = $('<p>').addClass('description').text(tmp);
+            li.append(p_functions);
 
-        // characteristics
-        var h3_mi_2 = $('<h3>').addClass('sub-category').text("Characteristics");
-        li.append(h3_mi_2);
-        tmp = eCodes_data[i].more_info.characteristics
-        var p_mi_2 = $('<p>').addClass('description').text(tmp);
-        li.append(p_mi_2);
+            // characteristics
+            var h3_mi_2 = $('<h3>').addClass('sub-category').text("Characteristics");
+            li.append(h3_mi_2);
+            tmp = eCodes_data[i].more_info.characteristics
+            var p_mi_2 = $('<p>').addClass('description').text(tmp);
+            li.append(p_mi_2);
 
-        // origin
-        var h3_mi_1 = $('<h3>').addClass('sub-category').text("Origin");
-        li.append(h3_mi_1);
-        tmp = eCodes_data[i].more_info.origin
-        var p_mi_1 = $('<p>').addClass('description').text(tmp);
-        li.append(p_mi_1);
+            // origin
+            var h3_mi_1 = $('<h3>').addClass('sub-category').text("Origin");
+            li.append(h3_mi_1);
+            tmp = eCodes_data[i].more_info.origin
+            var p_mi_1 = $('<p>').addClass('description').text(tmp);
+            li.append(p_mi_1);
 
-        // products
-        var h3_mi_3 = $('<h3>').addClass('sub-category').text("Products");
-        li.append(h3_mi_3);
-        tmp = eCodes_data[i].more_info.products
-        var p_mi_3 = $('<p>').addClass('description').text(tmp);
-        li.append(p_mi_3);
+            // products
+            var h3_mi_3 = $('<h3>').addClass('sub-category').text("Products");
+            li.append(h3_mi_3);
+            tmp = eCodes_data[i].more_info.products
+            var p_mi_3 = $('<p>').addClass('description').text(tmp);
+            li.append(p_mi_3);
 
-        // daily_intake
-        var h3_mi_4 = $('<h3>').addClass('sub-category').text("Daily Intake");
-        li.append(h3_mi_4);
-        tmp = eCodes_data[i].more_info.daily_intake
-        var p_mi_4 = $('<p>').addClass('description').text(tmp);
-        li.append(p_mi_4);
+            // daily_intake
+            var h3_mi_4 = $('<h3>').addClass('sub-category').text("Daily Intake");
+            li.append(h3_mi_4);
+            tmp = eCodes_data[i].more_info.daily_intake
+            var p_mi_4 = $('<p>').addClass('description').text(tmp);
+            li.append(p_mi_4);
 
-        // dietary_restrictions
-        var h3_mi_6 = $('<h3>').addClass('sub-category').text("Dietary Restrictions");
-        li.append(h3_mi_6);
-        tmp = eCodes_data[i].more_info.dietary_restrictions
-        var p_mi_6 = $('<p>').addClass('description').text(tmp);
-        li.append(p_mi_6);
+            // dietary_restrictions
+            var h3_mi_6 = $('<h3>').addClass('sub-category').text("Dietary Restrictions");
+            li.append(h3_mi_6);
+            tmp = eCodes_data[i].more_info.dietary_restrictions
+            var p_mi_6 = $('<p>').addClass('description').text(tmp);
+            li.append(p_mi_6);
 
-        $('#additionalEffectsList').append(li);
+            $('#additionalEffectsList').append(li);
+        }
     }
 }
 
