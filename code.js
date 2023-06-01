@@ -82,6 +82,7 @@ function displayAdditionalInformation(eCodes_data) {
 
     for (var i = 0; i < eCodes_data.length; i++) {
         var li = $('<li>');
+        var h3 = $('<h2>').text(eCodes_data[i].name);
         var h3 = $('<h3>').text(eCodes_data[i].name);
         var p = $('<p>').text(eCodes_data[i].function);
 
