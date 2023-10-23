@@ -39,7 +39,7 @@
 
         .data-value {
             color: #000;
-            font-size: 24px;
+            /* font-size: 24px; */
         }
 
         .data-image {
@@ -255,28 +255,6 @@
                 </li>
             </ol>
 
-            <h2>Making Informed Choices</h2>
-
-            <p>
-                With "Is It Healthy?" at your fingertips, you can quickly assess the healthiness of food products and
-                additives. This allows you to make informed choices when deciding whether a particular item is suitable
-                for
-                your dietary preferences and health goals.
-            </p>
-
-            <p>
-                We believe that knowledge is the key to making healthier decisions, and our app and website are here to
-                support you on your journey towards better food choices.
-            </p>
-
-            <h2>Disclaimer</h2>
-
-            <p>
-                Please note that the information provided by "Is It Healthy?" is for informational purposes only. We do
-                our
-                best to provide accurate and up-to-date information, but always consult with healthcare professionals or
-                relevant authorities if you have specific health concerns or questions about additives in your food.
-            </p>
         </div>
         <br>
         <br>
@@ -336,7 +314,7 @@
             <br>
             <div class="data-curved-box">
                 <ul id="mainSideEffectsList">
-                    Please search to display results
+                    <p class="data-value">Please search to display results</p>
                 </ul>
             </div>
             <br>
@@ -346,8 +324,7 @@
             <ul id="additionalEffectsList">
                 <li>
                     <div class="data-curved-box">
-                        <p class="data-title">Phone Number</p>
-                        <p class="data-number">123-456-7890</p>
+                        <p class="data-value">Please search to display results</p>
                     </div>
                 </li>
             </ul>
@@ -384,14 +361,75 @@
 
         <h1 class="top-title-heading">About</h1>
         <div class="container text-right">
+            <br>
             <p>
-                Welcome to "Is It Healthy?" - your trusted resource for quickly and conveniently evaluating the
+                My trusted resource for quickly and conveniently evaluating the
                 healthiness
                 of food products based on their INS (International Numbering System) and E-codes. Our app and website
                 are
                 designed to empower you with the knowledge you need to make informed decisions about the products you
                 consume.
             </p>
+
+            <h2>Making Informed Choices</h2>
+
+            <p>
+                With "Is It Healthy?" at your fingertips, you can quickly assess the healthiness of food products and
+                additives. This allows you to make informed choices when deciding whether a particular item is suitable
+                for
+                your dietary preferences and health goals.
+            </p>
+
+            <p>
+                We believe that knowledge is the key to making healthier decisions, and our app and website are here to
+                support you on your journey towards better food choices.
+            </p>
+
+            <h2>Disclaimer</h2>
+
+            <p>
+                Please note that the information provided by "Is It Healthy?" is for informational purposes only. We do
+                our
+                best to provide accurate and up-to-date information, but always consult with healthcare professionals or
+                relevant authorities if you have specific health concerns or questions about additives in your food.
+            </p>
+            <br>
+            <br>
+        </div>
+
+        <hr>
+        <div class="container text-center">
+            <h2>License</h2>
+            <br>
+            <pre>
+MIT License
+
+Copyright (c) 2023 Hirusha Adikari
+                
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+            </pre>
+        </div>
+        <br>
+        <br>
+        <hr>
+        <div class="container text-center">
+            <h2>built by @hirushaadi</h2>
         </div>
 
         <br>
@@ -5349,7 +5387,7 @@
             } else {
                 for (var i = 0; i < eCodes_data.length; i++) {
                     var tmp1 = "<p class='data-title'>" + eCodes_data[i].code + " (" + eCodes_data[i].name + ")</p > "
-                    var tmp2 = "<p class='data-number'>" + eCodes_data[i].more_info.side_effects + "</p>"
+                    var tmp2 = "<p class='data-value'>" + eCodes_data[i].more_info.side_effects + "</p>"
                     var tmp3 = tmp1 + tmp2;
                     var listItem = $("<li class='list-item'></li>").html(tmp3);
                     $("#mainSideEffectsList").append(listItem);
@@ -5374,32 +5412,32 @@
                     var p_name = $('<p>').addClass('data-title').text(eCodes_data[i].name + " - " + eCodes_data[i].code);
                     div.append(p_name);
 
-                    // Create a paragraph element with the class "data-number" for side effects
-                    var p_side_effects = $('<p>').addClass('data-number').text("Side Effects: " + eCodes_data[i].more_info.side_effects);
+                    // Create a paragraph element with the class "data-value" for side effects
+                    var p_side_effects = $('<p>').addClass('data-value').text("Side Effects: " + eCodes_data[i].more_info.side_effects);
                     div.append(p_side_effects);
 
-                    // Create a paragraph element with the class "data-number" for functions
-                    var p_functions = $('<p>').addClass('data-number').text("Functions: " + eCodes_data[i].more_info.functions);
+                    // Create a paragraph element with the class "data-value" for functions
+                    var p_functions = $('<p>').addClass('data-value').text("Functions: " + eCodes_data[i].more_info.functions);
                     div.append(p_functions);
 
-                    // Create a paragraph element with the class "data-number" for characteristics
-                    var p_characteristics = $('<p>').addClass('data-number').text("Characteristics: " + eCodes_data[i].more_info.characteristics);
+                    // Create a paragraph element with the class "data-value" for characteristics
+                    var p_characteristics = $('<p>').addClass('data-value').text("Characteristics: " + eCodes_data[i].more_info.characteristics);
                     div.append(p_characteristics);
 
-                    // Create a paragraph element with the class "data-number" for origin
-                    var p_origin = $('<p>').addClass('data-number').text("Origin: " + eCodes_data[i].more_info.origin);
+                    // Create a paragraph element with the class "data-value" for origin
+                    var p_origin = $('<p>').addClass('data-value').text("Origin: " + eCodes_data[i].more_info.origin);
                     div.append(p_origin);
 
-                    // Create a paragraph element with the class "data-number" for products
-                    var p_products = $('<p>').addClass('data-number').text("Products: " + eCodes_data[i].more_info.products);
+                    // Create a paragraph element with the class "data-value" for products
+                    var p_products = $('<p>').addClass('data-value').text("Products: " + eCodes_data[i].more_info.products);
                     div.append(p_products);
 
-                    // Create a paragraph element with the class "data-number" for daily intake
-                    var p_daily_intake = $('<p>').addClass('data-number').text("Daily Intake: " + eCodes_data[i].more_info.daily_intake);
+                    // Create a paragraph element with the class "data-value" for daily intake
+                    var p_daily_intake = $('<p>').addClass('data-value').text("Daily Intake: " + eCodes_data[i].more_info.daily_intake);
                     div.append(p_daily_intake);
 
-                    // Create a paragraph element with the class "data-number" for dietary restrictions
-                    var p_dietary_restrictions = $('<p>').addClass('data-number').text("Dietary Restrictions: " + eCodes_data[i].more_info.dietary_restrictions);
+                    // Create a paragraph element with the class "data-value" for dietary restrictions
+                    var p_dietary_restrictions = $('<p>').addClass('data-value').text("Dietary Restrictions: " + eCodes_data[i].more_info.dietary_restrictions);
                     div.append(p_dietary_restrictions);
 
                     // Append the div to the list item
