@@ -17,10 +17,9 @@ Discover the hidden truths behind the food you eat and embark on a journey of in
 
 ## How to use this?
 
-- If you are using a computer, click these:
+- If you are using a computer or an iphone, click these:
 
-  - [Light Mode](https://hirusha-adi.github.io/is-it-healthy/index.light.html)
-  - [Dark Mode](https://hirusha-adi.github.io/is-it-healthy/index.dark.html)
+  - [Web Version](https://hirusha-adi.github.io/is-it-healthy/index.html) (Note that this might have bad scaling issues)
 
 - If you using your android phone:
   - Download the latest `.apk` from the [Releases Page](https://github.com/hirusha-adi/is-it-healthy/releases)
@@ -28,7 +27,7 @@ Discover the hidden truths behind the food you eat and embark on a journey of in
 
 ## Android Installation Guide
 
-1. Download the .apk (Select from either the Dark Mode or the Light Mode)
+1. Download the .apk
 
 <img src="https://github.com/hirusha-adi/is-it-healthy/assets/36286877/19280121-105b-4266-96e1-dd8b09906499" width="300">
 
