@@ -1,7 +1,7 @@
 """
 The script should be run from the parent directory as follows:
 
-    python3 scripts/fix-summary.py
+    python3 scripts/summary-fix.py
     
 This script processes JSON data from an original file and modifies its structure
 by concatenating certain fields, removing unnecessary fields, and saving the modified
