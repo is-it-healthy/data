@@ -14,6 +14,8 @@
         "interactions": "Moderate Interaction\nBe cautious with this combination\nAntibiotics (Tetracycline antibiotics) interacts with RIBOFLAVIN\nRiboflavin might decrease the amount of tetracyclines that the body can absorb. Taking riboflavin along with tetracyclines might decrease the effects of tetracyclines. To avoid this interaction, take riboflavin 2 hours before or 4 hours after taking tetracyclines.",
         "precautions": "When taken by mouth: Riboflavin is likely safe for most people in doses of up to 400 mg daily. In some people, riboflavin can cause the urine to turn a bright yellow color. It may also cause nausea.\nPregnancy and breast-feeding: Riboflavin is likely safe when consumed in amounts commonly found in foods. The recommended intake is 1.4 mg daily during pregnancy and 1.6 mg daily during lactation.\nChildren: Riboflavin is likely safe for most children when consumed in amounts commonly found in foods. Higher doses of 100-200 mg daily have also been safely used.\nLiver disease: Riboflavin absorption is decreased in people with liver disease.",
         "articles": {
+            "FAO": "https://www.fao.org/gsfaonline/additives/details.html?id=135",
+            "EU": "https://ec.europa.eu/food/food-feed-portal/screen/food-additives/search/details/POL-FAD-IMPORT-2986",
             "Wikipedia": "https://en.wikipedia.org/wiki/Riboflavin",
             "WebMD": "https://www.webmd.com/vitamins/ai/ingredientmono-957/riboflavin",
             "PubChem": "https://pubchem.ncbi.nlm.nih.gov/compound/Riboflavin",
