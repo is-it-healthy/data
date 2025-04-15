@@ -4,12 +4,16 @@
         "name": "E100 - Curcumin (from turmeric)"
     },
     {
+        "code": "E100ii",
+        "name": "E100 - Turmeric"
+    },
+    {
         "code": "E101",
         "name": "E101 - Riboflavin (Vitamin B2), formerly called lactoflavin"
     },
     {
-        "code": "E101a",
-        "name": "E101a - Riboflavin-5'-Phosphate"
+        "code": "E101ii",
+        "name": "E101ii - Riboflavin-5'-Phosphate"
     },
     {
         "code": "E102",
