@@ -307,9 +307,51 @@
             "dietary_restrictions": "None; E142 can be consumed by all religious groups, vegans and vegetarians."
         }
     },
-    "150a-d": {
-        "code": "E150a-d",
-        "name": "Caramel",
+    "150a": {
+        "code": "E150a",
+        "name": "Plain caramel",
+        "href": "e150.htm",
+        "function": "Brown colour",
+        "more_info": {
+            "origin": "",
+            "characteristics": "Brown to black colours. Soluble in water and with a specific, sometimes bitter, taste.",
+            "products": "Many products.",
+            "daily_intake": "Up to 200 mg/kg body weight for E150c and E150d, whereas there is no ADI for E150a and/or E150b.",
+            "side_effects": "Side effects are manifested from the use of E150c and E150d, where intestinal problems may occur after ingestion of large amounts. Due to the complex nature of the mixtures, toxicology tests are still being carried out.",
+            "dietary_restrictions": "None; E150 can be consumed by all religious groups, vegans and vegetarians."
+        }
+    },
+    "E150b": {
+        "code": "E150b",
+        "name": "Caustic sulphite caramel",
+        "href": "e150.htm",
+        "function": "Brown colour",
+        "more_info": {
+            "origin": "",
+            "characteristics": "Brown to black colours. Soluble in water and with a specific, sometimes bitter, taste.",
+            "products": "Many products.",
+            "daily_intake": "Up to 200 mg/kg body weight for E150c and E150d, whereas there is no ADI for E150a and/or E150b.",
+            "side_effects": "Side effects are manifested from the use of E150c and E150d, where intestinal problems may occur after ingestion of large amounts. Due to the complex nature of the mixtures, toxicology tests are still being carried out.",
+            "dietary_restrictions": "None; E150 can be consumed by all religious groups, vegans and vegetarians."
+        }
+    },
+    "E150c": {
+        "code": "E150c",
+        "name": "Ammonia caramel",
+        "href": "e150.htm",
+        "function": "Brown colour",
+        "more_info": {
+            "origin": "",
+            "characteristics": "Brown to black colours. Soluble in water and with a specific, sometimes bitter, taste.",
+            "products": "Many products.",
+            "daily_intake": "Up to 200 mg/kg body weight for E150c and E150d, whereas there is no ADI for E150a and/or E150b.",
+            "side_effects": "Side effects are manifested from the use of E150c and E150d, where intestinal problems may occur after ingestion of large amounts. Due to the complex nature of the mixtures, toxicology tests are still being carried out.",
+            "dietary_restrictions": "None; E150 can be consumed by all religious groups, vegans and vegetarians."
+        }
+    },
+    "E150d": {
+        "code": "E150b",
+        "name": "Sulphite ammonia caramel",
         "href": "e150.htm",
         "function": "Brown colour",
         "more_info": {
